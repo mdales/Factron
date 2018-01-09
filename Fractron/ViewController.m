@@ -23,8 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.mandelbrot = [[DFMandelbrot alloc] initWithIterations:256
-                                                    dimensions:self.imageView.frame.size
+    self.mandelbrot = [[DFMandelbrot alloc] initWithIterations:1000
+                                                    dimensions:NSMakeSize(self.imageView.frame.size.width * 2.0, self.imageView.frame.size.height * 2.0)
                                                         region:NSMakeRect(-0.0, -0.7, 0.1, 0.1)];
     BRU_weakify(self);
     [self.mandelbrot startGenerationWithError:nil
