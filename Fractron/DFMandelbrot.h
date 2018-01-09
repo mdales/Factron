@@ -19,6 +19,6 @@
                                     region: (NSRect)region;
 
 - (BOOL)startGenerationWithError: (NSError * _Nullable * _Nullable)error
-                        callback: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSImage * _Nonnull image))callback;
+                        callback: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback;
 
 @end

@@ -15,6 +15,21 @@
 		4C4B3B602004DF930057BF37 /* FractronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B5F2004DF930057BF37 /* FractronTests.m */; };
 		4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
 		4C4B3B6D2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
+		4CA7066620052611002B97BF /* BRUInternalMaybeDDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064420052611002B97BF /* BRUInternalMaybeDDLog.m */; };
+		4CA7066720052611002B97BF /* BRUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064720052611002B97BF /* BRUTask.m */; };
+		4CA7066820052611002B97BF /* BRUAsserts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064B20052611002B97BF /* BRUAsserts.m */; };
+		4CA7066920052611002B97BF /* BRUTemporaryFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064C20052611002B97BF /* BRUTemporaryFiles.m */; };
+		4CA7066A20052611002B97BF /* BRUFileMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064D20052611002B97BF /* BRUFileMonitor.m */; };
+		4CA7066B20052611002B97BF /* BRUDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064E20052611002B97BF /* BRUDeferred.m */; };
+		4CA7066C20052611002B97BF /* BRUConcurrentBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065320052611002B97BF /* BRUConcurrentBox.m */; };
+		4CA7066D20052611002B97BF /* BRUMemoryRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065420052611002B97BF /* BRUMemoryRegion.m */; };
+		4CA7066E20052611002B97BF /* BRUTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065620052611002B97BF /* BRUTimer.m */; };
+		4CA7066F20052611002B97BF /* BRUEitherErrorOrSuccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065720052611002B97BF /* BRUEitherErrorOrSuccess.m */; };
+		4CA7067020052611002B97BF /* BRURetry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065D20052611002B97BF /* BRURetry.m */; };
+		4CA7067120052611002B97BF /* BRUConcurrentVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065E20052611002B97BF /* BRUConcurrentVariable.m */; };
+		4CA7067220052611002B97BF /* BRURateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065F20052611002B97BF /* BRURateLimiter.m */; };
+		4CA7067320052611002B97BF /* BRUSetDiffFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */; };
+		4CA7067420052611002B97BF /* BRUResourceCleanup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066120052611002B97BF /* BRUResourceCleanup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +58,43 @@
 		4C4B3B612004DF930057BF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4B3B6A2004E1430057BF37 /* DFMandelbrot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFMandelbrot.h; sourceTree = "<group>"; };
 		4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMandelbrot.m; sourceTree = "<group>"; };
+		4CA7064220052611002B97BF /* BRUMemoryRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUMemoryRegion.h; sourceTree = "<group>"; };
+		4CA7064320052611002B97BF /* BRUConcurrentBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUConcurrentBox.h; sourceTree = "<group>"; };
+		4CA7064420052611002B97BF /* BRUInternalMaybeDDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUInternalMaybeDDLog.m; sourceTree = "<group>"; };
+		4CA7064520052611002B97BF /* BRUEitherErrorOrSuccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUEitherErrorOrSuccess.h; sourceTree = "<group>"; };
+		4CA7064620052611002B97BF /* BRUTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUTimer.h; sourceTree = "<group>"; };
+		4CA7064720052611002B97BF /* BRUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUTask.m; sourceTree = "<group>"; };
+		4CA7064820052611002B97BF /* BRUConcurrentVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUConcurrentVariable.h; sourceTree = "<group>"; };
+		4CA7064920052611002B97BF /* BRURetry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRURetry.h; sourceTree = "<group>"; };
+		4CA7064A20052611002B97BF /* BRUDispatchUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUDispatchUtils.h; sourceTree = "<group>"; };
+		4CA7064B20052611002B97BF /* BRUAsserts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUAsserts.m; sourceTree = "<group>"; };
+		4CA7064C20052611002B97BF /* BRUTemporaryFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUTemporaryFiles.m; sourceTree = "<group>"; };
+		4CA7064D20052611002B97BF /* BRUFileMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUFileMonitor.m; sourceTree = "<group>"; };
+		4CA7064E20052611002B97BF /* BRUDeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUDeferred.m; sourceTree = "<group>"; };
+		4CA7064F20052611002B97BF /* BRUResourceCleanup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUResourceCleanup.h; sourceTree = "<group>"; };
+		4CA7065020052611002B97BF /* BRUSetDiffFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUSetDiffFormatter.h; sourceTree = "<group>"; };
+		4CA7065120052611002B97BF /* BRURateLimiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRURateLimiter.h; sourceTree = "<group>"; };
+		4CA7065220052611002B97BF /* BRUInternalMaybeDDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUInternalMaybeDDLog.h; sourceTree = "<group>"; };
+		4CA7065320052611002B97BF /* BRUConcurrentBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUConcurrentBox.m; sourceTree = "<group>"; };
+		4CA7065420052611002B97BF /* BRUMemoryRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUMemoryRegion.m; sourceTree = "<group>"; };
+		4CA7065520052611002B97BF /* BRUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUTask.h; sourceTree = "<group>"; };
+		4CA7065620052611002B97BF /* BRUTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUTimer.m; sourceTree = "<group>"; };
+		4CA7065720052611002B97BF /* BRUEitherErrorOrSuccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUEitherErrorOrSuccess.m; sourceTree = "<group>"; };
+		4CA7065820052611002B97BF /* BRUEqualityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUEqualityUtils.h; sourceTree = "<group>"; };
+		4CA7065920052611002B97BF /* BRUArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUArithmetic.h; sourceTree = "<group>"; };
+		4CA7065A20052611002B97BF /* BRUAsserts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUAsserts.h; sourceTree = "<group>"; };
+		4CA7065B20052611002B97BF /* BRUARCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUARCUtils.h; sourceTree = "<group>"; };
+		4CA7065C20052611002B97BF /* BRUBaseDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUBaseDefines.h; sourceTree = "<group>"; };
+		4CA7065D20052611002B97BF /* BRURetry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRURetry.m; sourceTree = "<group>"; };
+		4CA7065E20052611002B97BF /* BRUConcurrentVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUConcurrentVariable.m; sourceTree = "<group>"; };
+		4CA7065F20052611002B97BF /* BRURateLimiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRURateLimiter.m; sourceTree = "<group>"; };
+		4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUSetDiffFormatter.m; sourceTree = "<group>"; };
+		4CA7066120052611002B97BF /* BRUResourceCleanup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUResourceCleanup.m; sourceTree = "<group>"; };
+		4CA7066220052611002B97BF /* BRUDeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUDeferred.h; sourceTree = "<group>"; };
+		4CA7066320052611002B97BF /* BRUNullabilityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUNullabilityUtils.h; sourceTree = "<group>"; };
+		4CA7066420052611002B97BF /* BRUTemporaryFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUTemporaryFiles.h; sourceTree = "<group>"; };
+		4CA7066520052611002B97BF /* BRUFileMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUFileMonitor.h; sourceTree = "<group>"; };
+		4CA7067620053059002B97BF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +121,7 @@
 				4C4B3B472004DF930057BF37 /* Fractron */,
 				4C4B3B5E2004DF930057BF37 /* FractronTests */,
 				4C4B3B462004DF930057BF37 /* Products */,
+				4CA7067520053058002B97BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +137,7 @@
 		4C4B3B472004DF930057BF37 /* Fractron */ = {
 			isa = PBXGroup;
 			children = (
+				4CA70640200525F5002B97BF /* Thirdparty */,
 				4C4B3B482004DF930057BF37 /* AppDelegate.h */,
 				4C4B3B492004DF930057BF37 /* AppDelegate.m */,
 				4C4B3B4B2004DF930057BF37 /* ViewController.h */,
@@ -106,6 +160,66 @@
 				4C4B3B612004DF930057BF37 /* Info.plist */,
 			);
 			path = FractronTests;
+			sourceTree = "<group>";
+		};
+		4CA70640200525F5002B97BF /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				4CA7064120052611002B97BF /* BromiumCoreUtils */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		4CA7064120052611002B97BF /* BromiumCoreUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4CA7064220052611002B97BF /* BRUMemoryRegion.h */,
+				4CA7064320052611002B97BF /* BRUConcurrentBox.h */,
+				4CA7064420052611002B97BF /* BRUInternalMaybeDDLog.m */,
+				4CA7064520052611002B97BF /* BRUEitherErrorOrSuccess.h */,
+				4CA7064620052611002B97BF /* BRUTimer.h */,
+				4CA7064720052611002B97BF /* BRUTask.m */,
+				4CA7064820052611002B97BF /* BRUConcurrentVariable.h */,
+				4CA7064920052611002B97BF /* BRURetry.h */,
+				4CA7064A20052611002B97BF /* BRUDispatchUtils.h */,
+				4CA7064B20052611002B97BF /* BRUAsserts.m */,
+				4CA7064C20052611002B97BF /* BRUTemporaryFiles.m */,
+				4CA7064D20052611002B97BF /* BRUFileMonitor.m */,
+				4CA7064E20052611002B97BF /* BRUDeferred.m */,
+				4CA7064F20052611002B97BF /* BRUResourceCleanup.h */,
+				4CA7065020052611002B97BF /* BRUSetDiffFormatter.h */,
+				4CA7065120052611002B97BF /* BRURateLimiter.h */,
+				4CA7065220052611002B97BF /* BRUInternalMaybeDDLog.h */,
+				4CA7065320052611002B97BF /* BRUConcurrentBox.m */,
+				4CA7065420052611002B97BF /* BRUMemoryRegion.m */,
+				4CA7065520052611002B97BF /* BRUTask.h */,
+				4CA7065620052611002B97BF /* BRUTimer.m */,
+				4CA7065720052611002B97BF /* BRUEitherErrorOrSuccess.m */,
+				4CA7065820052611002B97BF /* BRUEqualityUtils.h */,
+				4CA7065920052611002B97BF /* BRUArithmetic.h */,
+				4CA7065A20052611002B97BF /* BRUAsserts.h */,
+				4CA7065B20052611002B97BF /* BRUARCUtils.h */,
+				4CA7065C20052611002B97BF /* BRUBaseDefines.h */,
+				4CA7065D20052611002B97BF /* BRURetry.m */,
+				4CA7065E20052611002B97BF /* BRUConcurrentVariable.m */,
+				4CA7065F20052611002B97BF /* BRURateLimiter.m */,
+				4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */,
+				4CA7066120052611002B97BF /* BRUResourceCleanup.m */,
+				4CA7066220052611002B97BF /* BRUDeferred.h */,
+				4CA7066320052611002B97BF /* BRUNullabilityUtils.h */,
+				4CA7066420052611002B97BF /* BRUTemporaryFiles.h */,
+				4CA7066520052611002B97BF /* BRUFileMonitor.h */,
+			);
+			name = BromiumCoreUtils;
+			path = Thirdparty/BromiumCoreUtils/BromiumCoreUtils;
+			sourceTree = SOURCE_ROOT;
+		};
+		4CA7067520053058002B97BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CA7067620053059002B97BF /* AppKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,10 +323,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA7066F20052611002B97BF /* BRUEitherErrorOrSuccess.m in Sources */,
+				4CA7066B20052611002B97BF /* BRUDeferred.m in Sources */,
 				4C4B3B4D2004DF930057BF37 /* ViewController.m in Sources */,
+				4CA7066C20052611002B97BF /* BRUConcurrentBox.m in Sources */,
+				4CA7067320052611002B97BF /* BRUSetDiffFormatter.m in Sources */,
+				4CA7067120052611002B97BF /* BRUConcurrentVariable.m in Sources */,
+				4CA7067420052611002B97BF /* BRUResourceCleanup.m in Sources */,
 				4C4B3B552004DF930057BF37 /* main.m in Sources */,
+				4CA7066A20052611002B97BF /* BRUFileMonitor.m in Sources */,
 				4C4B3B4A2004DF930057BF37 /* AppDelegate.m in Sources */,
+				4CA7066D20052611002B97BF /* BRUMemoryRegion.m in Sources */,
+				4CA7066820052611002B97BF /* BRUAsserts.m in Sources */,
+				4CA7067020052611002B97BF /* BRURetry.m in Sources */,
 				4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */,
+				4CA7066920052611002B97BF /* BRUTemporaryFiles.m in Sources */,
+				4CA7066E20052611002B97BF /* BRUTimer.m in Sources */,
+				4CA7067220052611002B97BF /* BRURateLimiter.m in Sources */,
+				4CA7066720052611002B97BF /* BRUTask.m in Sources */,
+				4CA7066620052611002B97BF /* BRUInternalMaybeDDLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
