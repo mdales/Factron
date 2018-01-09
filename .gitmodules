@@ -1,0 +1,3 @@
+[submodule "Thirdparty/BromiumCoreUtils"]
+	path = Thirdparty/BromiumCoreUtils
+	url = https://github.com/BromiumInc/BromiumCoreUtils.git
