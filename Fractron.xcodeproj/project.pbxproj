@@ -13,6 +13,8 @@
 		4C4B3B522004DF930057BF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4B3B502004DF930057BF37 /* Main.storyboard */; };
 		4C4B3B552004DF930057BF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B542004DF930057BF37 /* main.m */; };
 		4C4B3B602004DF930057BF37 /* FractronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B5F2004DF930057BF37 /* FractronTests.m */; };
+		4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
+		4C4B3B6D2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		4C4B3B5B2004DF930057BF37 /* FractronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4B3B5F2004DF930057BF37 /* FractronTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FractronTests.m; sourceTree = "<group>"; };
 		4C4B3B612004DF930057BF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C4B3B6A2004E1430057BF37 /* DFMandelbrot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFMandelbrot.h; sourceTree = "<group>"; };
+		4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMandelbrot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				4C4B3B532004DF930057BF37 /* Info.plist */,
 				4C4B3B542004DF930057BF37 /* main.m */,
 				4C4B3B562004DF930057BF37 /* Fractron.entitlements */,
+				4C4B3B6A2004E1430057BF37 /* DFMandelbrot.h */,
+				4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */,
 			);
 			path = Fractron;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				4C4B3B4D2004DF930057BF37 /* ViewController.m in Sources */,
 				4C4B3B552004DF930057BF37 /* main.m in Sources */,
 				4C4B3B4A2004DF930057BF37 /* AppDelegate.m in Sources */,
+				4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4B3B602004DF930057BF37 /* FractronTests.m in Sources */,
+				4C4B3B6D2004E1430057BF37 /* DFMandelbrot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
