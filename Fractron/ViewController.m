@@ -7,6 +7,7 @@
 //
 
 #import "BRUARCUtils.h"
+#import "BRUAsserts.h"
 
 #import "ViewController.h"
 #import "DFMandelbrot.h"
@@ -33,8 +34,8 @@
     BRU_weakify(self);
     [self.mandelbrot startGeneration:^(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData)
      {
-         NSParameterAssert(generator);
-         NSParameterAssert(imageData);
+         BRUParameterAssert(generator);
+         BRUParameterAssert(imageData);
          
          dispatch_async(dispatch_get_main_queue(), ^() {
              BRU_strongify(self);
