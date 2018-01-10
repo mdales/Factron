@@ -27,8 +27,7 @@
                                                     dimensions:NSMakeSize(self.imageView.frame.size.width * 2.0, self.imageView.frame.size.height * 2.0)
                                                         region:NSMakeRect(-0.0, -0.7, 0.1, 0.1)];
     BRU_weakify(self);
-    [self.mandelbrot startGenerationWithError:nil
-                                     callback:^(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData)
+    [self.mandelbrot startGeneration:^(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData)
     {
         NSParameterAssert(generator);
         NSParameterAssert(imageData);
@@ -58,6 +57,5 @@
         });
     }];
 }
-
 
 @end

@@ -18,7 +18,6 @@
                                 dimensions: (NSSize)dimensions
                                     region: (NSRect)region;
 
-- (BOOL)startGenerationWithError: (NSError * _Nullable * _Nullable)error
-                        callback: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback;
+- (BOOL)startGeneration: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback;
 
 @end

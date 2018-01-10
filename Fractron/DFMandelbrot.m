@@ -26,10 +26,11 @@
     return self;
 }
 
-- (NSInteger)calculateInterationsForPoint: (NSPoint)c
++ (NSInteger)calculateIterationsForPoint:(NSPoint)c
+                              iterations:(NSInteger)iterations
 {
     NSPoint z = c;
-    for (NSInteger i = 0; i < self.iterations; i++) {
+    for (NSInteger i = 0; i < iterations; i++) {
         NSPoint old = z;
         z.x = (old.x * old.x) - (old.y * old.y) + c.x;
         z.y = (2 * old.x * old.y) + c.y;
@@ -40,8 +41,27 @@
     return -1;
 }
 
-- (BOOL)startGenerationWithError: (NSError * _Nullable * _Nullable)error
-                        callback: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback
++ (void)generateRow:(NSInteger)y
+           fractalY:(CGFloat)fractalY
+           fractalX:(CGFloat)fractalX
+             x_skip:(CGFloat)x_skip
+             buffer:(uint8_t*)p
+              width:(NSInteger)width
+         iterations:(NSInteger)iterations
+{
+    for (NSInteger x = 0; x < width; x++) {
+        NSPoint fractalPoint = NSMakePoint(fractalX + (x_skip * x), fractalY);
+        NSInteger escape = [DFMandelbrot calculateIterationsForPoint:fractalPoint
+                                                          iterations:iterations];
+        if (escape >= 0) {
+            p[x + (y * width)] = 196 - (uint8_t)(escape % 128);
+        } else {
+            p[x + (y * width)] = 0;
+        }
+    }
+}
+
+- (BOOL)startGeneration: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback
 {
     NSParameterAssert(callback);
     
@@ -59,19 +79,25 @@
         double x_skip = self.region.size.width / self.dimensions.width;
         double y_skip = self.region.size.height / self.dimensions.height;
         
-        for (NSInteger x = 0; x < self.dimensions.width; x++) {
-            for (NSInteger y = 0; y < self.dimensions.height; y++) {
-                NSPoint fractalPoint = NSMakePoint(self.region.origin.x + (x_skip * x), self.region.origin.y + (y_skip * y));
-                NSInteger escape = [self calculateInterationsForPoint: fractalPoint];
-                if (escape >= 0) {
-                    p[x + (y * (NSInteger)self.dimensions.width)] = 196 - (uint8_t)(escape % 128);
-                } else {
-                    p[x + (y * (NSInteger)self.dimensions.width)] = 0;
+        for (NSInteger y = 0; y < self.dimensions.height; y++) {
+            
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^() {
+                BRU_strongify(self);
+                if (nil == self) {
+                    return;
                 }
-            }
+            
+                [DFMandelbrot generateRow:y
+                                 fractalY:self.region.origin.y + (y_skip * y)
+                                 fractalX:self.region.origin.x
+                                   x_skip:x_skip
+                                   buffer:p
+                                    width:self.dimensions.width
+                               iterations:self.iterations];
+                
+                callback(self, data);
+            });
         }
-        
-        callback(self, data);
     });
     
     return YES;
