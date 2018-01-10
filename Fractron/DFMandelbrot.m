@@ -7,14 +7,17 @@
 //
 
 #import "BRUARCUtils.h"
+#import "BRUAsserts.h"
 
 #import "DFMandelbrot.h"
 
 @implementation DFMandelbrot
 
-- (nonnull instancetype)initWithIterations: (NSInteger)iterations
-                                dimensions: (NSSize)dimensions
-                                    region: (NSRect)region
+BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
+
+- (nonnull instancetype)initWithIterations:(NSInteger)iterations
+                                dimensions:(NSSize)dimensions
+                                    region:(NSRect)region
 {
     self = [super init];
     if (nil != self) {
@@ -61,9 +64,9 @@
     }
 }
 
-- (BOOL)startGeneration: (void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback
+- (BOOL)startGeneration:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback
 {
-    NSParameterAssert(callback);
+    BRUParameterAssert(callback);
     
     BRU_weakify(self);
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^() {
@@ -73,7 +76,7 @@
         }
     
         NSMutableData *data = [[NSMutableData alloc] initWithLength: self.dimensions.width * self.dimensions.height];
-        NSAssert(data, @"Failed to allocate data!"); // docs imply this never fails
+        BRUAssert(data, @"Failed to allocate data!"); // docs imply this never fails
         uint8_t *p = (uint8_t*)data.bytes;
         
         double x_skip = self.region.size.width / self.dimensions.width;
