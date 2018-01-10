@@ -10,7 +10,10 @@
 
 @interface ViewController : NSViewController
 
-@property (nonatomic, weak) IBOutlet NSImageView *imageView;
+@property (nonatomic, readwrite, weak, nullable) IBOutlet NSImageView *imageView;
+
+- (IBAction)generateNewFractal:(__nullable id)sender;
+
 
 @end
 

@@ -14,7 +14,7 @@
  */
 @interface DFMandelbrot : NSObject
 
-@property (nonatomic, readonly) NSInteger iterations;
+@property (nonatomic, readonly) NSUInteger iterations;
 @property (nonatomic, readonly) NSSize dimensions;
 @property (nonatomic, readonly) NSRect region;
 
@@ -27,7 +27,7 @@ BRU_DEFAULT_INIT_UNAVAILABLE(nonnull);
  * @param dimensions The bitmap image size to be generated.
  * @param region The area of the mandelbrot to be rendered into the image.
  */
-- (nonnull instancetype)initWithIterations:(NSInteger)interations
+- (nonnull instancetype)initWithIterations:(NSUInteger)iterations
                                 dimensions:(NSSize)dimensions
                                     region:(NSRect)region;
 
