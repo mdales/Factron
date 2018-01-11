@@ -43,6 +43,21 @@
     [self generateNewFractal:nil];
 }
 
+- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[DFLocation class]]) {
+        MKAnnotationView *pin = [mapView dequeueReusableAnnotationViewWithIdentifier:[DFLocation className]];
+        if (nil == pin) {
+            pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                  reuseIdentifier:[DFLocation className]];
+        } else {
+            pin.annotation = annotation;
+        }
+        return pin;
+    }
+    return nil;
+}
+
 - (IBAction)generateNewFractal:(__unused __nullable id)sender
 {
     // Initally just work with first screen. We'll figure out what to do with others later.

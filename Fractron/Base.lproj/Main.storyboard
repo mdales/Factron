@@ -723,11 +723,15 @@
                             <mapView fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Ky-uv-iWZ">
                                 <rect key="frame" x="0.0" y="435" width="1000" height="365"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="Gdk-Xr-gjs"/>
+                                </connections>
                             </mapView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="b62-OH-uvD" id="E11-G9-brK"/>
+                        <outlet property="mapView" destination="7Ky-uv-iWZ" id="EUp-CW-uwd"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
