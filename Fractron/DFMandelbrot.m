@@ -29,6 +29,12 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
     return self;
 }
 
+- (nonnull NSString*)description
+{
+    return [NSString stringWithFormat:@"<DFMandelbrot: %@ in %@ with %lu iterations>", NSStringFromRect(self.region),
+            NSStringFromSize(self.dimensions), (unsigned long)self.iterations];
+}
+
 + (NSInteger)calculateIterationsForPoint:(NSPoint)c
                               iterations:(NSUInteger)iterations
 {
@@ -59,7 +65,7 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
         if (escape >= 0) {
             p[x + (y * width)] = 196 - (uint8_t)(escape % 128);
         } else {
-            p[x + (y * width)] = 0;
+            p[x + (y * width)] = 63;
         }
     }
 }
