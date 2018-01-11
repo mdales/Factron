@@ -16,13 +16,11 @@
 BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
 
 - (nonnull instancetype)initWithIterations:(NSUInteger)iterations
-                                dimensions:(NSSize)dimensions
                                     region:(NSRect)region
 {
     self = [super init];
     if (nil != self) {
         _iterations = iterations;
-        _dimensions = dimensions;
         _region = region;
     }
     
@@ -31,8 +29,8 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
 
 - (nonnull NSString*)description
 {
-    return [NSString stringWithFormat:@"<DFMandelbrot: %@ in %@ with %lu iterations>", NSStringFromRect(self.region),
-            NSStringFromSize(self.dimensions), (unsigned long)self.iterations];
+    return [NSString stringWithFormat:@"<DFMandelbrot: %@ with %lu iterations>", NSStringFromRect(self.region),
+            (unsigned long)self.iterations];
 }
 
 + (NSInteger)calculateIterationsForPoint:(NSPoint)c
@@ -63,14 +61,15 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
         NSInteger escape = [DFMandelbrot calculateIterationsForPoint:fractalPoint
                                                           iterations:iterations];
         if (escape >= 0) {
-            p[x + (y * width)] = 196 - (uint8_t)(escape % 128);
+            p[x + (y * width)] = (escape % 2) * 200; //196 - (uint8_t)(escape % 128);
         } else {
             p[x + (y * width)] = 63;
         }
     }
 }
 
-- (BOOL)startGeneration:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback
+- (BOOL)generateBitmapWithSize:(NSSize)dimensions
+                      callback:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData))callback
 {
     BRUParameterAssert(callback);
     
@@ -81,14 +80,14 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
             return;
         }
     
-        NSMutableData *data = [[NSMutableData alloc] initWithLength:(NSUInteger)(self.dimensions.width * self.dimensions.height)];
+        NSMutableData *data = [[NSMutableData alloc] initWithLength:(NSUInteger)(dimensions.width * dimensions.height)];
         BRUAssert(data, @"Failed to allocate data!"); // docs imply this never fails
         uint8_t *p = (uint8_t*)data.bytes;
         
-        double x_skip = self.region.size.width / self.dimensions.width;
-        double y_skip = self.region.size.height / self.dimensions.height;
+        double x_skip = self.region.size.width / dimensions.width;
+        double y_skip = self.region.size.height / dimensions.height;
         
-        for (NSUInteger y = 0; y < self.dimensions.height; y++) {
+        for (NSUInteger y = 0; y < dimensions.height; y++) {
             
             dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^() {
                 BRU_strongify(self);
@@ -101,10 +100,10 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
                                  fractalX:self.region.origin.x
                                    x_skip:x_skip
                                    buffer:p
-                                    width:(NSUInteger)self.dimensions.width
+                                    width:(NSUInteger)dimensions.width
                                iterations:self.iterations];
                 
-                callback(self, data);
+                callback(self, dimensions, data);
             });
         }
     });

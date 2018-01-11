@@ -38,10 +38,10 @@
                                    screen.frame.size.height * screen.backingScaleFactor);
     
     self.mandelbrot = [[DFMandelbrot alloc] initWithIterations:1000
-                                                    dimensions:screenSize
-                                                        region:NSMakeRect(-0.0, -0.7, 0.1, 0.1)];
+                                                        region:NSMakeRect(-2.0, -2.0, 4.0, 4.0)];
     BRU_weakify(self);
-    [self.mandelbrot startGeneration:^(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData)
+    [self.mandelbrot generateBitmapWithSize:screenSize
+                                   callback:^(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData)
      {
          BRUParameterAssert(generator);
          BRUParameterAssert(imageData);
@@ -54,17 +54,17 @@
              
              unsigned char *p = (unsigned char *)imageData.bytes;
              NSBitmapImageRep *imageRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:&p
-                                                                                  pixelsWide:(NSInteger)generator.dimensions.width
-                                                                                  pixelsHigh:(NSInteger)generator.dimensions.height
+                                                                                  pixelsWide:(NSInteger)dimensions.width
+                                                                                  pixelsHigh:(NSInteger)dimensions.height
                                                                                bitsPerSample:8
                                                                              samplesPerPixel:1
                                                                                     hasAlpha:NO
                                                                                     isPlanar:NO
                                                                               colorSpaceName:NSCalibratedWhiteColorSpace
-                                                                                 bytesPerRow:(NSInteger)generator.dimensions.width
+                                                                                 bytesPerRow:(NSInteger)dimensions.width
                                                                                 bitsPerPixel:8];
              
-             NSImage * image = [[NSImage alloc] initWithSize:generator.dimensions];
+             NSImage * image = [[NSImage alloc] initWithSize:dimensions];
              [image addRepresentation:imageRep];
              
              self.imageView.image = image;

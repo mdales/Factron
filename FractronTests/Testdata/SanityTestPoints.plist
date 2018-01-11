@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>x</key>
+		<integer>-200</integer>
+		<key>y</key>
+		<integer>-200</integer>
+		<key>w</key>
+		<integer>4</integer>
+		<key>h</key>
+		<integer>4</integer>
+		<key>expectedVariance</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>x</key>
+		<real>-2</real>
+		<key>y</key>
+		<integer>-2</integer>
+		<key>w</key>
+		<integer>4</integer>
+		<key>h</key>
+		<integer>4</integer>
+		<key>expectedVariance</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>x</key>
+		<real>-0.1</real>
+		<key>y</key>
+		<real>-0.1</real>
+		<key>w</key>
+		<real>0.1</real>
+		<key>h</key>
+		<real>0.1</real>
+		<key>expectedVariance</key>
+		<false/>
+	</dict>
+</array>
+</plist>

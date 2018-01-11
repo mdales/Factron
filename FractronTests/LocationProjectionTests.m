@@ -1,18 +1,18 @@
 //
-//  FractronTests.m
+//  LocationProjectionTests.m
 //  FractronTests
 //
-//  Created by Michael Dales on 09/01/2018.
+//  Created by Michael Dales on 11/01/2018.
 //  Copyright © 2018 Digital Flapjack. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface FractronTests : XCTestCase
+@interface LocationProjectionTests : XCTestCase
 
 @end
 
-@implementation FractronTests
+@implementation LocationProjectionTests
 
 - (void)setUp {
     [super setUp];

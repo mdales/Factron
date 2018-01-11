@@ -15,7 +15,6 @@
 @interface DFMandelbrot : NSObject
 
 @property (nonatomic, readonly) NSUInteger iterations;
-@property (nonatomic, readonly) NSSize dimensions;
 @property (nonatomic, readonly) NSRect region;
 
 BRU_DEFAULT_INIT_UNAVAILABLE(nonnull);
@@ -24,19 +23,18 @@ BRU_DEFAULT_INIT_UNAVAILABLE(nonnull);
  * Construct a representation of a mandelbrot.
  *
  * @param iterations How many iterations to run of the algorithm per pixel. More iterations increase accuracy by decrease performance.
- * @param dimensions The bitmap image size to be generated.
  * @param region The area of the mandelbrot to be rendered into the image.
  */
 - (nonnull instancetype)initWithIterations:(NSUInteger)iterations
-                                dimensions:(NSSize)dimensions
                                     region:(NSRect)region;
 
 /**
  * Will start the actual calculation of the image, and call the callback possibly multiple times whilst the image is generated.
  *
+ * @param dimensions The bitmap image size to be generated.
  * @param callback A callback to be invoked when there is an update to the image being generated. Can be called multiple times
  *                 so as to give progressive updates. The data contains a greyscale 8bpp bitmap at the dimensions specified.
  */
-- (BOOL)startGeneration:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSData * _Nonnull imageData))callback;
-
+- (BOOL)generateBitmapWithSize:(NSSize)dimensions
+                      callback:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData))callback;
 @end

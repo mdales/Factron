@@ -12,7 +12,6 @@
 		4C4B3B4F2004DF930057BF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4B3B4E2004DF930057BF37 /* Assets.xcassets */; };
 		4C4B3B522004DF930057BF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4B3B502004DF930057BF37 /* Main.storyboard */; };
 		4C4B3B552004DF930057BF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B542004DF930057BF37 /* main.m */; };
-		4C4B3B602004DF930057BF37 /* FractronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B5F2004DF930057BF37 /* FractronTests.m */; };
 		4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
 		4C4B3B6D2004E1430057BF37 /* DFMandelbrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */; };
 		4CA7066620052611002B97BF /* BRUInternalMaybeDDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064420052611002B97BF /* BRUInternalMaybeDDLog.m */; };
@@ -30,6 +29,25 @@
 		4CA7067220052611002B97BF /* BRURateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065F20052611002B97BF /* BRURateLimiter.m */; };
 		4CA7067320052611002B97BF /* BRUSetDiffFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */; };
 		4CA7067420052611002B97BF /* BRUResourceCleanup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066120052611002B97BF /* BRUResourceCleanup.m */; };
+		4CF7AFB820076A5D00EF092C /* LocationProjectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF7AFB720076A5D00EF092C /* LocationProjectionTests.m */; };
+		4CF7AFBB20076A9F00EF092C /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF7AFBA20076A9F00EF092C /* Locations.plist */; };
+		4CF7AFBD20076D9600EF092C /* DFMandelbrotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF7AFBC20076D9600EF092C /* DFMandelbrotTests.m */; };
+		4CF7AFBF200771A200EF092C /* SanityTestPoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF7AFBE200771A200EF092C /* SanityTestPoints.plist */; };
+		4CF7AFC02007774900EF092C /* BRUInternalMaybeDDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064420052611002B97BF /* BRUInternalMaybeDDLog.m */; };
+		4CF7AFC12007774900EF092C /* BRUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064720052611002B97BF /* BRUTask.m */; };
+		4CF7AFC22007774900EF092C /* BRUAsserts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064B20052611002B97BF /* BRUAsserts.m */; };
+		4CF7AFC32007774900EF092C /* BRUTemporaryFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064C20052611002B97BF /* BRUTemporaryFiles.m */; };
+		4CF7AFC42007774900EF092C /* BRUFileMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064D20052611002B97BF /* BRUFileMonitor.m */; };
+		4CF7AFC52007774900EF092C /* BRUDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7064E20052611002B97BF /* BRUDeferred.m */; };
+		4CF7AFC62007774900EF092C /* BRUConcurrentBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065320052611002B97BF /* BRUConcurrentBox.m */; };
+		4CF7AFC72007774900EF092C /* BRUMemoryRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065420052611002B97BF /* BRUMemoryRegion.m */; };
+		4CF7AFC82007774900EF092C /* BRUTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065620052611002B97BF /* BRUTimer.m */; };
+		4CF7AFC92007774900EF092C /* BRUEitherErrorOrSuccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065720052611002B97BF /* BRUEitherErrorOrSuccess.m */; };
+		4CF7AFCA2007774900EF092C /* BRURetry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065D20052611002B97BF /* BRURetry.m */; };
+		4CF7AFCB2007774900EF092C /* BRUConcurrentVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065E20052611002B97BF /* BRUConcurrentVariable.m */; };
+		4CF7AFCC2007774900EF092C /* BRURateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065F20052611002B97BF /* BRURateLimiter.m */; };
+		4CF7AFCD2007774900EF092C /* BRUSetDiffFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */; };
+		4CF7AFCE2007774900EF092C /* BRUResourceCleanup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066120052611002B97BF /* BRUResourceCleanup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +72,6 @@
 		4C4B3B542004DF930057BF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C4B3B562004DF930057BF37 /* Fractron.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fractron.entitlements; sourceTree = "<group>"; };
 		4C4B3B5B2004DF930057BF37 /* FractronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C4B3B5F2004DF930057BF37 /* FractronTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FractronTests.m; sourceTree = "<group>"; };
 		4C4B3B612004DF930057BF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4B3B6A2004E1430057BF37 /* DFMandelbrot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFMandelbrot.h; sourceTree = "<group>"; };
 		4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMandelbrot.m; sourceTree = "<group>"; };
@@ -95,6 +112,10 @@
 		4CA7066420052611002B97BF /* BRUTemporaryFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUTemporaryFiles.h; sourceTree = "<group>"; };
 		4CA7066520052611002B97BF /* BRUFileMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUFileMonitor.h; sourceTree = "<group>"; };
 		4CA7067620053059002B97BF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4CF7AFB720076A5D00EF092C /* LocationProjectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationProjectionTests.m; sourceTree = "<group>"; };
+		4CF7AFBA20076A9F00EF092C /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		4CF7AFBC20076D9600EF092C /* DFMandelbrotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMandelbrotTests.m; sourceTree = "<group>"; };
+		4CF7AFBE200771A200EF092C /* SanityTestPoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SanityTestPoints.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +177,10 @@
 		4C4B3B5E2004DF930057BF37 /* FractronTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C4B3B5F2004DF930057BF37 /* FractronTests.m */,
+				4CF7AFB920076A6E00EF092C /* Testdata */,
 				4C4B3B612004DF930057BF37 /* Info.plist */,
+				4CF7AFB720076A5D00EF092C /* LocationProjectionTests.m */,
+				4CF7AFBC20076D9600EF092C /* DFMandelbrotTests.m */,
 			);
 			path = FractronTests;
 			sourceTree = "<group>";
@@ -222,6 +245,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4CF7AFB920076A6E00EF092C /* Testdata */ = {
+			isa = PBXGroup;
+			children = (
+				4CF7AFBA20076A9F00EF092C /* Locations.plist */,
+				4CF7AFBE200771A200EF092C /* SanityTestPoints.plist */,
+			);
+			path = Testdata;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,7 +308,6 @@
 					4C4B3B5A2004DF930057BF37 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 4C4B3B442004DF930057BF37;
 					};
 				};
 			};
@@ -313,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF7AFBB20076A9F00EF092C /* Locations.plist in Resources */,
+				4CF7AFBF200771A200EF092C /* SanityTestPoints.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +382,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4B3B602004DF930057BF37 /* FractronTests.m in Sources */,
+				4CF7AFC02007774900EF092C /* BRUInternalMaybeDDLog.m in Sources */,
+				4CF7AFC12007774900EF092C /* BRUTask.m in Sources */,
+				4CF7AFC22007774900EF092C /* BRUAsserts.m in Sources */,
+				4CF7AFC32007774900EF092C /* BRUTemporaryFiles.m in Sources */,
+				4CF7AFC42007774900EF092C /* BRUFileMonitor.m in Sources */,
+				4CF7AFC52007774900EF092C /* BRUDeferred.m in Sources */,
+				4CF7AFC62007774900EF092C /* BRUConcurrentBox.m in Sources */,
+				4CF7AFC72007774900EF092C /* BRUMemoryRegion.m in Sources */,
+				4CF7AFC82007774900EF092C /* BRUTimer.m in Sources */,
+				4CF7AFC92007774900EF092C /* BRUEitherErrorOrSuccess.m in Sources */,
+				4CF7AFCA2007774900EF092C /* BRURetry.m in Sources */,
+				4CF7AFCB2007774900EF092C /* BRUConcurrentVariable.m in Sources */,
+				4CF7AFCC2007774900EF092C /* BRURateLimiter.m in Sources */,
+				4CF7AFCD2007774900EF092C /* BRUSetDiffFormatter.m in Sources */,
+				4CF7AFCE2007774900EF092C /* BRUResourceCleanup.m in Sources */,
+				4CF7AFB820076A5D00EF092C /* LocationProjectionTests.m in Sources */,
 				4C4B3B6D2004E1430057BF37 /* DFMandelbrot.m in Sources */,
+				4CF7AFBD20076D9600EF092C /* DFMandelbrotTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,28 +589,24 @@
 		4C4B3B682004DF930057BF37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FractronTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.FractronTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractron.app/Contents/MacOS/Fractron";
 			};
 			name = Debug;
 		};
 		4C4B3B692004DF930057BF37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FractronTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.FractronTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractron.app/Contents/MacOS/Fractron";
 			};
 			name = Release;
 		};
