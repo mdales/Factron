@@ -11,6 +11,7 @@
 
 #import "ViewController.h"
 #import "DFMandelbrot.h"
+#import "DFLocation.h"
 
 @interface ViewController()
 
@@ -23,6 +24,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSArray<NSDictionary *> *rawLocationData = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Locations"
+                                                                                                                ofType:@"plist"]];
+    if (nil != rawLocationData) {
+        NSMutableArray<DFLocation *> *locations = [NSMutableArray arrayWithCapacity:rawLocationData.count];
+        [rawLocationData enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull locationDict, __unused NSUInteger idx, __unused BOOL * _Nonnull stop) {
+            DFLocation *location = [[DFLocation alloc] initLocationWithName:locationDict[@"Location"]
+                                                                   latitude:locationDict[@"Latitude"]
+                                                                  longitude:locationDict[@"Longitude"]];
+            [locations addObject:location];
+         }];
+        [self.mapView addAnnotations:locations];
+    } else {
+        NSLog(@"Failed to load location data");
+    }
+    
     [self generateNewFractal:nil];
 }
 
@@ -72,7 +89,7 @@
              self.imageView.image = image;
          });
      }];
-    if (NO != res) {
+    if (NO == res) {
         NSLog(@"Failed to start generation of fractal: %@", err);
     }
 }

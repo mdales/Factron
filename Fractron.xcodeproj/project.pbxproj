@@ -48,6 +48,10 @@
 		4CF7AFCC2007774900EF092C /* BRURateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7065F20052611002B97BF /* BRURateLimiter.m */; };
 		4CF7AFCD2007774900EF092C /* BRUSetDiffFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066020052611002B97BF /* BRUSetDiffFormatter.m */; };
 		4CF7AFCE2007774900EF092C /* BRUResourceCleanup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7066120052611002B97BF /* BRUResourceCleanup.m */; };
+		4CF7AFCF2007869300EF092C /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF7AFBA20076A9F00EF092C /* Locations.plist */; };
+		4CF7AFD12007872500EF092C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF7AFD02007872400EF092C /* MapKit.framework */; };
+		4CF7AFD420078C3200EF092C /* DFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF7AFD320078C3200EF092C /* DFLocation.m */; };
+		4CF7AFD520078C3200EF092C /* DFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF7AFD320078C3200EF092C /* DFLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,9 @@
 		4CF7AFBA20076A9F00EF092C /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
 		4CF7AFBC20076D9600EF092C /* DFMandelbrotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMandelbrotTests.m; sourceTree = "<group>"; };
 		4CF7AFBE200771A200EF092C /* SanityTestPoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SanityTestPoints.plist; sourceTree = "<group>"; };
+		4CF7AFD02007872400EF092C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4CF7AFD220078C3200EF092C /* DFLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFLocation.h; sourceTree = "<group>"; };
+		4CF7AFD320078C3200EF092C /* DFLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF7AFD12007872500EF092C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +178,8 @@
 				4C4B3B562004DF930057BF37 /* Fractron.entitlements */,
 				4C4B3B6A2004E1430057BF37 /* DFMandelbrot.h */,
 				4C4B3B6B2004E1430057BF37 /* DFMandelbrot.m */,
+				4CF7AFD220078C3200EF092C /* DFLocation.h */,
+				4CF7AFD320078C3200EF092C /* DFLocation.m */,
 			);
 			path = Fractron;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 		4CA7067520053058002B97BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CF7AFD02007872400EF092C /* MapKit.framework */,
 				4CA7067620053059002B97BF /* AppKit.framework */,
 			);
 			name = Frameworks;
@@ -335,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF7AFCF2007869300EF092C /* Locations.plist in Resources */,
 				4C4B3B4F2004DF930057BF37 /* Assets.xcassets in Resources */,
 				4C4B3B522004DF930057BF37 /* Main.storyboard in Resources */,
 			);
@@ -370,6 +382,7 @@
 				4CA7066820052611002B97BF /* BRUAsserts.m in Sources */,
 				4CA7067020052611002B97BF /* BRURetry.m in Sources */,
 				4C4B3B6C2004E1430057BF37 /* DFMandelbrot.m in Sources */,
+				4CF7AFD420078C3200EF092C /* DFLocation.m in Sources */,
 				4CA7066920052611002B97BF /* BRUTemporaryFiles.m in Sources */,
 				4CA7066E20052611002B97BF /* BRUTimer.m in Sources */,
 				4CA7067220052611002B97BF /* BRURateLimiter.m in Sources */,
@@ -384,6 +397,7 @@
 			files = (
 				4CF7AFC02007774900EF092C /* BRUInternalMaybeDDLog.m in Sources */,
 				4CF7AFC12007774900EF092C /* BRUTask.m in Sources */,
+				4CF7AFD520078C3200EF092C /* DFLocation.m in Sources */,
 				4CF7AFC22007774900EF092C /* BRUAsserts.m in Sources */,
 				4CF7AFC32007774900EF092C /* BRUTemporaryFiles.m in Sources */,
 				4CF7AFC42007774900EF092C /* BRUFileMonitor.m in Sources */,
