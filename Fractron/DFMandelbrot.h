@@ -32,9 +32,12 @@ BRU_DEFAULT_INIT_UNAVAILABLE(nonnull);
  * Will start the actual calculation of the image, and call the callback possibly multiple times whilst the image is generated.
  *
  * @param dimensions The bitmap image size to be generated.
+ * @param error Assigned reason for failure if can't generate image.
  * @param callback A callback to be invoked when there is an update to the image being generated. Can be called multiple times
  *                 so as to give progressive updates. The data contains a greyscale 8bpp bitmap at the dimensions specified.
+ * @result Returns YES if starting generation is successful, otherwise returns NO and assigns reason to error param.
  */
 - (BOOL)generateBitmapWithSize:(NSSize)dimensions
+                         error:(BRUOutError)error
                       callback:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData))callback;
 @end

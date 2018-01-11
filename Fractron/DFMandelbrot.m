@@ -61,7 +61,7 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
         NSInteger escape = [DFMandelbrot calculateIterationsForPoint:fractalPoint
                                                           iterations:iterations];
         if (escape >= 0) {
-            p[x + (y * width)] = (escape % 2) * 200; //196 - (uint8_t)(escape % 128);
+            p[x + (y * width)] = 196 - (uint8_t)(escape % 128);
         } else {
             p[x + (y * width)] = 63;
         }
@@ -69,9 +69,17 @@ BRU_DEFAULT_INIT_UNAVAILABLE_IMPL
 }
 
 - (BOOL)generateBitmapWithSize:(NSSize)dimensions
+                         error:(BRUOutError)error
                       callback:(void (^ _Nonnull )(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData))callback
 {
     BRUParameterAssert(callback);
+    
+    if (!(dimensions.width > 0.0) || !(dimensions.height > 0.0)) {
+        BRU_ASSIGN_OUT_PTR(error, [NSError errorWithDomain:NSPOSIXErrorDomain
+                                                      code:EINVAL
+                                                  userInfo:@{BRUErrorReasonKey: @"Dimensions not positive"}]);
+        return NO;
+    }
     
     BRU_weakify(self);
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^() {

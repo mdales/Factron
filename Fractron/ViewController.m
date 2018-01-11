@@ -40,8 +40,10 @@
     self.mandelbrot = [[DFMandelbrot alloc] initWithIterations:1000
                                                         region:NSMakeRect(-2.0, -2.0, 4.0, 4.0)];
     BRU_weakify(self);
-    [self.mandelbrot generateBitmapWithSize:screenSize
-                                   callback:^(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData)
+    NSError *err = nil;
+    BOOL res = [self.mandelbrot generateBitmapWithSize:screenSize
+                                                 error:&err
+                                              callback:^(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData)
      {
          BRUParameterAssert(generator);
          BRUParameterAssert(imageData);
@@ -70,6 +72,9 @@
              self.imageView.image = image;
          });
      }];
+    if (NO != res) {
+        NSLog(@"Failed to start generation of fractal: %@", err);
+    }
 }
 
 @end

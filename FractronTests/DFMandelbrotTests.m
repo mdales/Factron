@@ -38,11 +38,16 @@
         NSSize testSize = NSMakeSize(16.0, 16.0);
         __block NSData *data = nil;
         dispatch_semaphore_t sem = dispatch_semaphore_create(0);
-        [m generateBitmapWithSize:testSize
-                         callback:^(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData) {
+        NSError *err = nil;
+        BOOL res = [m generateBitmapWithSize:testSize
+                                       error:&err
+                                    callback:^(DFMandelbrot* _Nonnull generator, NSSize dimensions, NSData * _Nonnull imageData) {
             data = imageData;
             dispatch_semaphore_signal(sem);
          }];
+        XCTAssertTrue(res, @"Error starting generation: %@", err);
+        XCTAssertNil(err, @"Got unexpected error");
+        
         // we get an update per line rendered, so need to wait for all to complete
         for (NSUInteger i = 0; i < (NSUInteger)testSize.height; i++) {
             dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
